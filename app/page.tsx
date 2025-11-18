@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   const buttons = [
-    { label: "Resume", href: "/Resume_Jorge_Alejandro_Sandoval_Romo.pdf" },
+    { label: "Resume", href: "/Resume_Jorge_Alejandro_Sandoval_Romo_nov_2025.pdf" },
     { label: "Github", href: "https://github.com/jorgesandev" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/jorgesandev/" },
     { label: "Youtube", href: "https://www.youtube.com/@jorgesandev" },
