@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Jorge Alejandro",
-  description: "Jorge Alejandro Sandoval Romo",
+  title: "Jorge Sandoval",
+  description: "Jorge Alejandro Sandoval Romo - Software Engineering Student",
 };
 
 export default function RootLayout({
@@ -18,8 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased text-on-surface bg-surface font-sans`}>
+        <Navbar />
         {children}
       </body>
     </html>
