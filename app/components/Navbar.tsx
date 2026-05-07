@@ -21,7 +21,17 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-panel border-b ghost-border">
       <div className="h-16 max-w-6xl mx-auto px-4 md:px-6 w-full flex items-center justify-between">
         
-        <Link href="/" onClick={() => setIsOpen(false)} className="font-sans font-medium text-base md:text-lg tracking-tight hover:text-primary transition-colors shrink-0">
+        <Link 
+          href="/" 
+          onClick={(e) => {
+            if (window.location.pathname === '/') {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            setIsOpen(false);
+          }} 
+          className="font-sans font-medium text-base md:text-lg tracking-tight hover:text-primary transition-colors shrink-0"
+        >
           Jorge Sandoval
         </Link>
 
