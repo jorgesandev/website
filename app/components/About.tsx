@@ -57,11 +57,12 @@ export default function About() {
               <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
               <span className="w-1.5 h-1.5 bg-outline rounded-full"></span>
             </div>
-            <div className="relative w-full h-full rounded-sm overflow-hidden ghost-border">
+            <div className="relative w-full h-full rounded-sm overflow-hidden ghost-border" style={{ position: "relative" }}>
               <Image 
                 src="/jorge.jpeg" 
                 alt="Jorge Sandoval" 
                 fill
+                sizes="(max-width: 768px) 100vw, 400px"
                 className="object-cover transition-all duration-700 ease-in-out"
                 priority
               />
