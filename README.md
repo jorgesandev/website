@@ -1,15 +1,20 @@
-# Arrakis Portfolio
+# jorgesandoval.dev
 
-A minimalist, "Tactical Laboratory" aesthetic portfolio inspired by Teenage Engineering and the Dune universe. 
+Source code for my personal website and developer portfolio.
+Live at **[jorgesandoval.dev](https://jorgesandoval.dev)**.
 
-Built for high performance, modular architecture, and a strict grid system constraint.
+## About
 
-## Features
+I'm Jorge Sandoval, a software engineer and builder. This site is where I showcase the projects I'm working on, share a bit about my background, and give people a way to get in touch.
 
-- **Component-Driven Pipeline**: Modular single-page architecture powered by Next.js (App Router).
-- **Tactical Aesthetics**: Heavy use of monospace labels (`Space Grotesk`), sans-serif body text (`Inter`), and 1px borders with tonal surface shifts.
-- **Particle Portrait**: A custom HTML Canvas interactive node that renders profile imagery as shifting, Spice Orange sand particles reacting to client mouse coordinate velocity and local pixel brightness logic.
-- **Fluid Layout**: Asymmetrical flex logic using `framer-motion` to drive complex UX interactions (e.g., the horizontal-scroll Pet Projects carousel, animated Hero cursors).
+The design leans into a minimalist, "tactical laboratory" aesthetic with monospace labels, tight grids, and tonal surface shifts that keep the focus on content.
+
+## Highlights
+
+- **Particle Portrait**: A custom HTML Canvas effect that renders my profile photo as shifting sand particles, reacting to mouse movement and pixel brightness.
+- **Modular Architecture**: Component-driven single-page layout built on the Next.js App Router.
+- **Fluid Interactions**: Asymmetrical flex layouts powered by Framer Motion (horizontal-scroll project carousel, animated hero cursors, etc.).
+- **Tactical Typography**: `Space Grotesk` for labels, `Inter` for body text, 1px borders, and subtle surface color shifts.
 
 ## Tech Stack
 
@@ -18,19 +23,20 @@ Built for high performance, modular architecture, and a strict grid system const
 - [Tailwind CSS](https://tailwindcss.com)
 - [Framer Motion](https://www.framer.com/motion/)
 - [React Icons](https://react-icons.github.io/react-icons/)
+- TypeScript
 
-## Getting Started
-
-First, install the dependencies if you haven't already:
+## Local Development
 
 ```bash
+# Install dependencies
 npm install
-```
 
-Then, run the development server:
-
-```bash
+# Start the dev server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) to view the site locally.
+
+## License
+
+© Jorge Sandoval. All rights reserved.
