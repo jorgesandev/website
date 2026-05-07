@@ -59,10 +59,10 @@ export default function About() {
             </div>
             <div className="relative w-full h-full rounded-sm overflow-hidden ghost-border">
               <Image 
-                src="/jorge_sandoval.JPG" 
+                src="/jorge.jpeg" 
                 alt="Jorge Sandoval" 
                 fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+                className="object-cover transition-all duration-700 ease-in-out"
                 priority
               />
             </div>
