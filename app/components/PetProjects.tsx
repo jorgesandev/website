@@ -1,19 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
 export default function PetProjects() {
-  const targetRef = useRef<HTMLDivElement>(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  // Moving 4 items means we shift by -75% of the total track width
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
-
   const projects = [
     {
       id: "PRJ_01",
@@ -54,10 +43,10 @@ export default function PetProjects() {
   ];
 
   return (
-    <section id="projects" ref={targetRef} className="h-[250vh] relative bg-surface">
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden border-b ghost-border dot-grid py-20">
+    <section id="projects" className="py-24 relative bg-surface border-b ghost-border dot-grid">
+      <div className="max-w-6xl mx-auto px-6 w-full">
         
-        <div className="max-w-6xl mx-auto px-6 w-full mb-12 flex-shrink-0 pt-16 md:pt-0">
+        <div className="mb-12">
           <div className="label-text text-primary mb-4 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
             Section 03 // Pet Projects
@@ -67,11 +56,11 @@ export default function PetProjects() {
           </h2>
         </div>
 
-        <motion.div style={{ x }} className="flex gap-8 px-6 md:px-[calc((100vw-72rem)/2+1.5rem)] w-max">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="w-[85vw] md:w-[45vw] lg:w-[40vw] max-w-2xl bg-surface-container-lowest p-8 rounded-sm ghost-border shadow-[0_2px_10px_rgba(0,0,0,0.03)] flex-shrink-0 flex flex-col justify-between h-[450px] md:h-[400px]"
+              className="w-full bg-surface-container-lowest p-8 rounded-sm ghost-border shadow-[0_2px_10px_rgba(0,0,0,0.03)] flex flex-col justify-between h-[450px] md:h-[400px]"
             >
               <div>
                 <div className="flex justify-between items-center mb-8 border-b ghost-border pb-4">
@@ -114,7 +103,7 @@ export default function PetProjects() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
         
       </div>
     </section>

@@ -5,7 +5,7 @@ import PetProjects from "./components/PetProjects";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen relative">
       <Hero />
       <About />
       <Experience />
