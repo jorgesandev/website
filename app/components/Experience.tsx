@@ -2,7 +2,7 @@ export default function Experience() {
   const experiences = [
     {
       id: "01",
-      role: "Founding Software Engineer",
+      role: "Software Engineer",
       company: "Pitch Jams",
       period: "October 2025 - Present",
       description: "Architected and developed a cross-platform mobile and web application from scratch using React Native (Expo) and Django backend. Led technical direction for the front-end repository and orchestrated the Beta Testing phase through TestFlight and Google Play Console."
