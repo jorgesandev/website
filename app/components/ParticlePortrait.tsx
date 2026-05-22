@@ -22,11 +22,13 @@ export default function ParticlePortrait() {
   const linesRef = useRef<Particle[]>([]);
   const imageLoadedRef = useRef(false);
   const startTimeRef = useRef<number>(0);
-  const [size, setSize] = useState(400);
+  const [size, setSize] = useState(0);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+    // Read actual width immediately so the canvas never renders larger than its container
+    setSize(Math.floor(container.clientWidth));
     const observer = new ResizeObserver((entries) => {
       for (const entry of entries) {
         setSize(Math.floor(entry.contentRect.width));
@@ -229,11 +231,13 @@ export default function ParticlePortrait() {
 
   return (
     <div ref={containerRef} className="relative w-full aspect-square flex items-center justify-center">
-      <canvas
-        ref={canvasRef}
-        className="simulation-container cursor-crosshair z-10"
-        style={{ width: `${size}px`, height: `${size}px` }}
-      />
+      {size > 0 && (
+        <canvas
+          ref={canvasRef}
+          className="simulation-container cursor-crosshair z-10"
+          style={{ width: `${size}px`, height: `${size}px` }}
+        />
+      )}
     </div>
   );
 }
