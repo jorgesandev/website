@@ -35,7 +35,7 @@ export default function Hero() {
             <a href="mailto:contact@jorgesandoval.dev" className="tactical-button border border-primary text-primary hover:bg-primary hover:text-on-primary uppercase flex items-center justify-center gap-2 w-full sm:w-auto">
               <FaEnvelope size={16} /> Say hi!
             </a>
-            <a href="/Jorge_Sandoval_Resume.pdf" target="_blank" rel="noopener noreferrer" className="tactical-button border border-outline text-on-surface hover:border-primary hover:text-primary uppercase flex items-center justify-center gap-2 w-full sm:w-auto">
+            <a href="/Jorge_Sandoval_Resume_2026_q2.pdf" target="_blank" rel="noopener noreferrer" className="tactical-button border border-outline text-on-surface hover:border-primary hover:text-primary uppercase flex items-center justify-center gap-2 w-full sm:w-auto">
               <FaFilePdf size={16} /> Resume
             </a>
           </div>

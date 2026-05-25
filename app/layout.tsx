@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Jorge Sandoval",
-  description: "Jorge Alejandro Sandoval Romo - Software Engineering Student",
+  description: "Software engineer building React Native and fullstack apps. Founding engineer at Pitch Jams.",
 };
 
 export default function RootLayout({
