@@ -2,17 +2,17 @@ export default function Experience() {
   const experiences = [
     {
       id: "01",
-      role: "Software Engineer",
+      role: "Founding Software Engineer",
       company: "Pitch Jams",
-      period: "October 2025 - Present",
-      description: "Architected and developed a cross-platform mobile and web application from scratch using React Native (Expo) and Django backend. Led technical direction for the front-end repository and orchestrated the Beta Testing phase through TestFlight and Google Play Console."
+      period: "October 2025 to Present",
+      description: "Building the Expo monorepo that ships Pitch Jams to iOS, Android, and web from a single React Native codebase. Designed the subscription tier architecture across 4 plans (Free/Pro Pitcher, Free/Pro Jammer, Enterprise) with the corresponding access control logic. Managing beta distribution through TestFlight and Google Play Console. Also contribute to the Django REST backend: API endpoints, data models, and authentication."
     },
     {
       id: "02",
       role: "IT Intern",
       company: "Directive Consulting",
-      period: "May 2025 - October 2025",
-      description: "Developed an internal asset inventory management system using Next.js, Firebase Auth, and Firestore with RBAC via Google Workspace Admin SDK."
+      period: "May 2025 to October 2025",
+      description: "Built an internal asset inventory management system using Next.js, Firebase Auth, and Firestore. Integrated Google Workspace Admin SDK via Cloud Functions for role-based access control, with real-time queries and Google SSO."
     }
   ];
 

@@ -28,7 +28,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-on-surface-variant font-sans text-sm md:text-lg max-w-lg mb-8 md:mb-10 leading-relaxed md:font-light px-2 md:px-0">
-            Software Engineering candidate at UABC ('26) with experience in mobile (React Native/Expo) and fullstack development. Winner of national Web3 and AI hackathons, with hands-on experience designing, building, and deploying applications from scratch. AWS Certified, fluent in English (C2).
+            Software engineer building React Native and fullstack applications. Founding engineer at Pitch Jams, a Canadian startup for pitch competitions. 3 national hackathon wins across Web3, AI, and civic tech (1st at Ethereum México). Graduating UABC June 2026. Based in Tijuana.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">

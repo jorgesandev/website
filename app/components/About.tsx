@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function About() {
-  const techStack = ["TypeScript", "Python", "React.js", "Next.js", "Java", "Docker", "AWS"];
+  const techStack = ["TypeScript", "React", "React Native (Expo)", "Next.js", "Python", "Django", "AWS", "Docker"];
   
 
   return (
@@ -16,11 +16,11 @@ export default function About() {
           </div>
           
           <h2 className="text-4xl font-sans font-bold text-on-surface mb-6">
-            Architecting resilient systems and digital monoliths.
+            Shipping mobile and web apps.
           </h2>
           
           <p className="text-on-surface-variant font-sans text-base md:text-lg mb-6 leading-relaxed">
-            I am a Software Engineering candidate at <span className="text-primary font-medium">UABC ('26)</span> and the Founding Software Engineer at <span className="text-primary font-medium">Pitch Jams</span>, where I lead the architecture for cross-platform mobile and web systems. My work is grounded in high-performance fullstack development, honed through an IT Internship at <span className="text-primary font-medium">Directive Consulting</span> and 1st-place wins at national events like the <span className="text-primary font-medium">Ethereum México Hackathon</span>.
+            I'm a software engineering student at <span className="text-primary font-medium">UABC Tijuana</span>, graduating June 2026. Founding engineer at <span className="text-primary font-medium">Pitch Jams</span>, where I build the Expo monorepo that ships iOS, Android, and web from a single React Native codebase, plus contribute to the <span className="text-primary font-medium">Django backend</span>. Before that I interned at <span className="text-primary font-medium">Directive Consulting</span> building an internal asset management system. I've won three national hackathons, most recently 1st place at <span className="text-primary font-medium">Ethereum México</span> with <span className="text-primary font-medium">LiquiFi</span>, a decentralized invoice factoring platform.
           </p>
           
           <p className="text-on-surface-variant font-sans text-base md:text-lg mb-4 leading-relaxed">
@@ -43,7 +43,7 @@ export default function About() {
               PERSONAL LOG //
             </div>
             <p className="text-on-surface-variant font-sans text-base md:text-lg leading-relaxed">
-              Outside of the terminal, I am a music producer, a tech gadget collector, and a traveler. I also happen to be a big fan of the <em>Dune</em> saga!
+              Outside of the terminal, I'm a music producer, a tech gadget collector, and a traveler. Big Dune fan.
             </p>
           </div>
         </div>

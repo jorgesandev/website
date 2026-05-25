@@ -2,7 +2,6 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import PetProjects from "./components/PetProjects";
-import LandingPages from "./components/LandingPages";
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       <About />
       <Experience />
       <PetProjects />
-      <LandingPages />
       
       <footer className="py-12 border-t ghost-border text-center label-text text-xs text-outline bg-surface-container-low">
         <p>© {new Date().getFullYear()} JORGE SANDOVAL // ALL RIGHTS RESERVED.</p>
