@@ -34,7 +34,7 @@ export default function PetProjects() {
     {
       id: "PRJ_04",
       name: "Yaocihuatl",
-      description: "Built for the Hackathon de Ciberdemocracia 2026, hosted in Chihuahua and sponsored by UABC. Institutional platform to detect, document, preserve, and channel cases of political gender based violence in digital spaces. Three modules: Tlachia (observation and alerts), Machiyotl (forensic evidence sealing with SHA-256 hashes and chain of custody), and Chimalli (legal AI assistant with local RAG). Deployed on AWS EC2 with Next.js, FastAPI, PostgreSQL with pgvector, and Redis.",
+      description: "Built for the Hackathon de Ciberdemocracia 2026, hosted in Chihuahua. Institutional platform to detect, document, preserve, and channel cases of political gender based violence in digital spaces. Three modules: Tlachia (observation and alerts), Machiyotl (forensic evidence sealing with SHA-256 hashes and chain of custody), and Chimalli (legal AI assistant with local RAG). Deployed on AWS EC2 with Next.js, FastAPI, PostgreSQL with pgvector, and Redis.",
       tech: ["Civic Tech", "AI", "RAG", "FastAPI"],
       status: "LIVE",
       github: "https://github.com/jorgesandev/yaocihuatl",
@@ -55,7 +55,8 @@ export default function PetProjects() {
       description: "Built for the AMD Developer Hackathon 2026, Vision and Multimodal AI track. AI system that drafts hospital insurance appeal letters in 60 to 90 seconds, addressing the $262B in recoverable revenue that US hospitals leave unappealed every year. Multimodal RAG over patient charts, payer policies, clinical literature, and past winning appeals. Runs Qwen 2.5 reasoning and vision models on an AMD Instinct MI300X via vLLM and ROCm.",
       tech: ["AI", "RAG", "Multimodal", "FastAPI"],
       status: "HACKATHON",
-      github: "https://github.com/jorgesandev/denial-defender"
+      github: "https://github.com/jorgesandev/denialdefender",
+      web: "https://www.trydenialdefender.com"
     }
   ];
 
