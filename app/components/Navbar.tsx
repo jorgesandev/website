@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaTiktok, FaXTwitter, FaYoutube, FaBars, FaXmark } from 'react-icons/fa6';
+import { FaEnvelope, FaGithub, FaLinkedin, FaBars, FaXmark } from 'react-icons/fa6';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,11 +10,7 @@ export default function Navbar() {
   const socialLinks = [
     { href: "https://github.com/jorgesandev", label: "GitHub", icon: <FaGithub size={18} /> },
     { href: "https://www.linkedin.com/in/jorgesandev/", label: "LinkedIn", icon: <FaLinkedin size={18} /> },
-    { href: "https://x.com/jorgesandev", label: "X", icon: <FaXTwitter size={18} /> },
-    { href: "https://www.instagram.com/jorgesandev/", label: "Instagram", icon: <FaInstagram size={18} /> },
-    { href: "https://www.tiktok.com/@jorgesandev", label: "TikTok", icon: <FaTiktok size={18} /> },
-    { href: "https://www.youtube.com/@jorgesandevyt", label: "YouTube", icon: <FaYoutube size={18} /> },
-    { href: "mailto:contact@jorgesandoval.dev", label: "Email", icon: <FaEnvelope size={18} /> },
+    { href: "mailto:jorge@jorgesandoval.dev", label: "Email", icon: <FaEnvelope size={18} /> },
   ];
 
   return (

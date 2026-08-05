@@ -18,6 +18,10 @@ export default function Hero() {
 
         {/* Right Column: Text content */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-2 w-full max-w-md md:max-w-full">
+          <div className="label-text text-[10px] text-primary mb-4 flex items-center gap-2 border border-primary/30 bg-primary/5 px-3 py-2 rounded-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block animate-pulse" />
+            Available for opportunities
+          </div>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-sans font-light text-on-surface mb-4 md:mb-6 flex flex-wrap justify-center md:justify-start items-center">
             Hi,&nbsp;<span className="text-primary font-normal">Jorge</span>&nbsp;here
             <motion.span
@@ -28,14 +32,14 @@ export default function Hero() {
           </h1>
 
           <p className="text-on-surface-variant font-sans text-sm md:text-lg max-w-lg mb-8 md:mb-10 leading-relaxed md:font-light px-2 md:px-0">
-            Software engineer building React Native and fullstack applications. Founding engineer at Pitch Jams, a Canadian startup for pitch competitions. 3 national hackathon wins across Web3, AI, and civic tech (1st at Ethereum México). Graduating UABC June 2026. Based in Tijuana.
+            Software engineer building mobile, web, and applied-AI products. I work across TypeScript, React Native, Next.js, and Python, with three national hackathon placements including 1st at Ethereum México. UABC degree requirements completed. Based in Tijuana and open to remote, on-site, or relocation-supported roles.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
-            <a href="mailto:contact@jorgesandoval.dev" className="tactical-button border border-primary text-primary hover:bg-primary hover:text-on-primary uppercase flex items-center justify-center gap-2 w-full sm:w-auto">
-              <FaEnvelope size={16} /> Say hi!
+            <a href="mailto:jorge@jorgesandoval.dev" className="tactical-button border border-primary text-primary hover:bg-primary hover:text-on-primary uppercase flex items-center justify-center gap-2 w-full sm:w-auto">
+              <FaEnvelope size={16} /> Contact me
             </a>
-            <a href="/Jorge_Sandoval_Resume_2026_q2.pdf" target="_blank" rel="noopener noreferrer" className="tactical-button border border-outline text-on-surface hover:border-primary hover:text-primary uppercase flex items-center justify-center gap-2 w-full sm:w-auto">
+            <a href="/Jorge_Alejandro_Sandoval_Resume.pdf" target="_blank" rel="noopener noreferrer" className="tactical-button border border-outline text-on-surface hover:border-primary hover:text-primary uppercase flex items-center justify-center gap-2 w-full sm:w-auto">
               <FaFilePdf size={16} /> Resume
             </a>
           </div>

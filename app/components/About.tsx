@@ -16,11 +16,11 @@ export default function About() {
           </div>
           
           <h2 className="text-4xl font-sans font-bold text-on-surface mb-6">
-            Shipping mobile and web apps.
+            Building products across mobile, web, and AI.
           </h2>
           
           <p className="text-on-surface-variant font-sans text-base md:text-lg mb-6 leading-relaxed">
-            I'm a software engineering student at <span className="text-primary font-medium">UABC Tijuana</span>, graduating June 2026. Founding engineer at <span className="text-primary font-medium">Pitch Jams</span>, where I build the Expo monorepo that ships iOS, Android, and web from a single React Native codebase, plus contribute to the <span className="text-primary font-medium">Django backend</span>. Before that I interned at <span className="text-primary font-medium">Directive Consulting</span> building an internal asset management system. I've won three national hackathons, most recently 1st place at <span className="text-primary font-medium">Ethereum México</span> with <span className="text-primary font-medium">LiquiFi</span>, a decentralized invoice factoring platform.
+            I completed the degree requirements for Software and Emerging Technologies Engineering at <span className="text-primary font-medium">UABC Tijuana</span>. My experience spans a part-time equity startup project, an IT internship at <span className="text-primary font-medium">Directive Consulting</span>, and production-minded hackathon builds. I work primarily with <span className="text-primary font-medium">TypeScript, React Native, Next.js, and Python</span>, and I have three national hackathon placements including 1st place at <span className="text-primary font-medium">Ethereum México</span> with <span className="text-primary font-medium">LiquiFi</span>.
           </p>
           
           <p className="text-on-surface-variant font-sans text-base md:text-lg mb-4 leading-relaxed">
@@ -43,7 +43,7 @@ export default function About() {
               PERSONAL LOG //
             </div>
             <p className="text-on-surface-variant font-sans text-base md:text-lg leading-relaxed">
-              Outside of the terminal, I'm a music producer, a tech gadget collector, and a traveler. Big Dune fan.
+              I care about products that are useful, explainable, and thoughtfully built. Outside engineering, I make music and play piano.
             </p>
           </div>
         </div>

@@ -7,7 +7,7 @@ export default function PetProjects() {
     {
       id: "PRJ_01",
       name: "LiquiFi",
-      description: "1st Place at Ethereum México Hackathon (November 2025). Decentralized invoice factoring on Ethereum. SMEs sell unpaid invoices to liquidity providers via smart contracts and receive capital upfront.",
+      description: "1st Place at Ethereum México Hackathon (November 2025). My contribution: led development of the Next.js product and Arbitrum smart-contract integrations for a decentralized invoice-financing prototype serving SMEs.",
       tech: ["Web3", "Ethereum", "Smart Contracts"],
       status: "1ST PLACE",
       github: "https://github.com/jorgesandev/liquifi",
@@ -16,7 +16,7 @@ export default function PetProjects() {
     {
       id: "PRJ_02",
       name: "AxoCred",
-      description: "2nd Place at Crevolution Hackathon (October 2025). B2B SaaS that turns bank debt collection into proactive credit renegotiation. Axo, a conversational AI built with Google Gemini and the Live API for real time voice, contacts at risk users before their due date, offers flexible payment plans, and syncs agreements with the bank's core system.",
+      description: "2nd Place at Crevolution Hackathon (October 2025). My contribution: co-built the interactive B2B credit-renegotiation demo and helped integrate Gemini-powered conversational and real-time voice flows.",
       tech: ["AI", "Conversational AI", "B2B SaaS", "Fintech"],
       status: "2ND PLACE",
       github: "https://github.com/jorgesandev/axocred-demo",
@@ -24,26 +24,26 @@ export default function PetProjects() {
     },
     {
       id: "PRJ_03",
-      name: "LegisConnect",
-      description: "3rd Place at Hackathon \"Elegis Tech³\" (March 2025). A social network for civic engagement, where citizens follow legislative activity and discuss bills relevant to them.",
-      tech: ["Civic Tech", "Social Network", "Next.js", "TypeScript"],
-      status: "3RD PLACE",
-      github: "https://github.com/jorgesandev/LegisConnect",
-      web: "https://legis-connect.vercel.app/"
+      name: "Senda",
+      description: "Accessible pedestrian routing for Tijuana, built for HackFox 2026. My contribution: led implementation of the Next.js and FastAPI product, profile-aware Valhalla routing, live citizen barrier reports, and AI-assisted route guidance.",
+      tech: ["Accessibility", "Next.js", "FastAPI", "Valhalla"],
+      status: "MVP",
+      github: "https://github.com/jorgesandev/Senda",
+      web: "https://sendamx.vercel.app/"
     },
     {
       id: "PRJ_04",
       name: "Yaocihuatl",
-      description: "Built for the Hackathon de Ciberdemocracia 2026, hosted in Chihuahua. Institutional platform to detect, document, preserve, and channel cases of political gender based violence in digital spaces. Three modules: Tlachia (observation and alerts), Machiyotl (forensic evidence sealing with SHA-256 hashes and chain of custody), and Chimalli (legal AI assistant with local RAG). Deployed on AWS EC2 with Next.js, FastAPI, PostgreSQL with pgvector, and Redis.",
+      description: "Institutional MVP for documenting political gender-based violence online. My contribution: built and deployed the Next.js, FastAPI, PostgreSQL/pgvector, and Redis architecture on AWS using synthetic demonstration data and human-review safeguards.",
       tech: ["Civic Tech", "AI", "RAG", "FastAPI"],
-      status: "LIVE",
+      status: "MVP",
       github: "https://github.com/jorgesandev/yaocihuatl",
-      web: "https://yaocihuatl.com"
+      web: null
     },
     {
       id: "PRJ_05",
       name: "FRCT",
-      description: "Built for the MBC Hackathon. An onchain CFO that routes USDC between Base and Solana using Polymarket forecasts and Circle's CCTP.",
+      description: "Built for the MBC Hackathon. My contribution: implemented an onchain treasury interface that converts Polymarket signals into risk-aware USDC allocation and cross-chain routing across Base and Solana.",
       tech: ["Next.js", "Solidity", "Rust", "Circle CCTP"],
       status: "HACKATHON",
       github: "https://github.com/jorgesandev/frct",
@@ -52,7 +52,7 @@ export default function PetProjects() {
     {
       id: "PRJ_06",
       name: "DenialDefender",
-      description: "Built for the AMD Developer Hackathon 2026, Vision and Multimodal AI track. AI system that drafts hospital insurance appeal letters in 60 to 90 seconds, addressing the $262B in recoverable revenue that US hospitals leave unappealed every year. Multimodal RAG over patient charts, payer policies, clinical literature, and past winning appeals. Runs Qwen 2.5 reasoning and vision models on an AMD Instinct MI300X via vLLM and ROCm.",
+      description: "Built for the AMD Developer Hackathon 2026. My contribution: implemented the multimodal RAG workflow, synthetic clinical dataset, interactive demo pipeline, and frontend for drafting hospital insurance appeals with Qwen models on AMD infrastructure.",
       tech: ["AI", "RAG", "Multimodal", "FastAPI"],
       status: "HACKATHON",
       github: "https://github.com/jorgesandev/denialdefender",
@@ -84,7 +84,7 @@ export default function PetProjects() {
                 <div className="flex justify-between items-center mb-8 border-b ghost-border pb-4">
                   <span className="label-text text-outline text-xs">{project.id}</span>
                   <div className="flex items-center gap-2">
-                    <span className={`w-2 h-2 rounded-full ${['LIVE', '1ST PLACE', '2ND PLACE', '3RD PLACE'].includes(project.status) ? 'bg-primary' : 'bg-outline'}`}></span>
+                    <span className={`w-2 h-2 rounded-full ${['LIVE', 'MVP', '1ST PLACE', '2ND PLACE', '3RD PLACE'].includes(project.status) ? 'bg-primary' : 'bg-outline'}`}></span>
                     <span className="label-text text-[10px]">{project.status}</span>
                   </div>
                 </div>

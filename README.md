@@ -5,7 +5,7 @@ Live at **[jorgesandoval.dev](https://jorgesandoval.dev)**.
 
 ## About
 
-I'm Jorge Sandoval, a software engineer and builder. This site is where I showcase the projects I'm working on, share a bit about my background, and give people a way to get in touch.
+I'm Jorge Sandoval, a software engineer based in Tijuana. This focused professional portfolio presents my experience, selected projects, resume, and contact information for recruiters, collaborators, and technical communities.
 
 The design leans into a minimalist, "tactical laboratory" aesthetic with monospace labels, tight grids, and tonal surface shifts that keep the focus on content.
 
@@ -24,6 +24,13 @@ The design leans into a minimalist, "tactical laboratory" aesthetic with monospa
 - [Framer Motion](https://www.framer.com/motion/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - TypeScript
+
+## Professional identity
+
+- Portfolio: [jorgesandoval.dev](https://jorgesandoval.dev)
+- GitHub: [github.com/jorgesandev](https://github.com/jorgesandev)
+- LinkedIn: [linkedin.com/in/jorgesandev](https://www.linkedin.com/in/jorgesandev/)
+- Email: [jorge@jorgesandoval.dev](mailto:jorge@jorgesandoval.dev)
 
 ## Local Development
 
