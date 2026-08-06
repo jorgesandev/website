@@ -20,7 +20,7 @@ export default function About() {
           </h2>
           
           <p className="text-on-surface-variant font-sans text-base md:text-lg mb-6 leading-relaxed">
-            I completed the degree requirements for Software and Emerging Technologies Engineering at <span className="text-primary font-medium">UABC Tijuana</span>. My experience spans a part-time equity startup project, an IT internship at <span className="text-primary font-medium">Directive Consulting</span>, and production-minded hackathon builds. I work primarily with <span className="text-primary font-medium">TypeScript, React Native, Next.js, and Python</span>, and I have three national hackathon placements including 1st place at <span className="text-primary font-medium">Ethereum México</span> with <span className="text-primary font-medium">LiquiFi</span>.
+            I completed the degree requirements for Software and Emerging Technologies Engineering at <span className="text-primary font-medium">UABC Tijuana</span>; degree issuance is pending. My experience spans a part-time equity startup project, an IT internship at <span className="text-primary font-medium">Directive Consulting</span>, and production-minded hackathon builds. I work primarily with <span className="text-primary font-medium">TypeScript, React Native, Next.js, and Python</span>, and I have three national hackathon placements including 1st place at <span className="text-primary font-medium">Ethereum México</span> with <span className="text-primary font-medium">LiquiFi</span>.
           </p>
           
           <p className="text-on-surface-variant font-sans text-base md:text-lg mb-4 leading-relaxed">
@@ -60,7 +60,7 @@ export default function About() {
             <div className="relative w-full h-full rounded-sm overflow-hidden ghost-border" style={{ position: "relative" }}>
               <Image 
                 src="/jorge.jpeg" 
-                alt="Jorge Sandoval" 
+                alt="Jorge Alejandro Sandoval Romo"
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"
                 className="object-cover transition-all duration-700 ease-in-out"

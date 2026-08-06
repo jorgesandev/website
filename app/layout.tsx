@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Jorge Sandoval | Software Engineer",
+  title: "Jorge Alejandro Sandoval Romo | Software Engineer",
   description: "Software engineer in Tijuana building mobile, web, and applied-AI products with TypeScript, React Native, Next.js, and Python.",
 };
 

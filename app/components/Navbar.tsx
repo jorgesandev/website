@@ -28,7 +28,8 @@ export default function Navbar() {
           }} 
           className="font-sans font-medium text-base md:text-lg tracking-tight hover:text-primary transition-colors shrink-0"
         >
-          Jorge Sandoval
+          <span className="sm:hidden">Jorge Sandoval</span>
+          <span className="hidden sm:inline">Jorge Alejandro Sandoval Romo</span>
         </Link>
 
         {/* Desktop text links */}

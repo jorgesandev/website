@@ -5,7 +5,7 @@ Live at **[jorgesandoval.dev](https://jorgesandoval.dev)**.
 
 ## About
 
-I'm Jorge Sandoval, a software engineer based in Tijuana. This focused professional portfolio presents my experience, selected projects, resume, and contact information for recruiters, collaborators, and technical communities.
+I'm Jorge Alejandro Sandoval Romo, a software engineer based in Tijuana. This focused professional portfolio presents my experience, selected projects, resume, and contact information for recruiters, collaborators, and technical communities.
 
 The design leans into a minimalist, "tactical laboratory" aesthetic with monospace labels, tight grids, and tonal surface shifts that keep the focus on content.
 
