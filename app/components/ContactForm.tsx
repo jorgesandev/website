@@ -10,7 +10,7 @@ export default function ContactForm({ endpoint }: { endpoint: string | null }) {
           you’d like to explore.
         </p>
         <a className="button primary" href="mailto:contact@jorgesandoval.dev">
-          Email Jorge <span aria-hidden="true">↗</span>
+          Email Jorge
         </a>
         <p className="form-note">
           The inquiry form is temporarily unavailable. Direct email is always
@@ -88,7 +88,7 @@ export default function ContactForm({ endpoint }: { endpoint: string | null }) {
         your submission on the next page.
       </p>
       <button className="button primary" type="submit">
-        Send inquiry <span aria-hidden="true">↗</span>
+        Send inquiry
       </button>
     </form>
   );

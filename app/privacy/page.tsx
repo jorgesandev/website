@@ -29,11 +29,11 @@ export default function Privacy() {
       </p>
       <p>
         <a href="https://formspree.io/legal/privacy-policy/">
-          Formspree privacy policy ↗
+          Formspree privacy policy
         </a>
       </p>
       <p>
-        <Link href="/#contact">← Back to contact</Link>
+        <Link href="/#contact">Back to contact</Link>
       </p>
     </main>
   );

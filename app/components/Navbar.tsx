@@ -45,7 +45,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn ↗
+            LinkedIn
           </a>
         </div>
       </nav>

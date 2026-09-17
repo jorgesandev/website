@@ -18,7 +18,7 @@ export default function Hero() {
         </p>
         <div className="actions">
           <a className="button primary" href="#projects">
-            Explore my work <span aria-hidden="true">↘</span>
+            Explore my work
           </a>
           <a
             className="button"
@@ -26,7 +26,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View résumé <span aria-hidden="true">↗</span>
+            View résumé
           </a>
         </div>
         <p className="availability">

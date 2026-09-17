@@ -23,7 +23,7 @@ export default function Contact() {
           worth exploring? I’d like to hear about it.
         </p>
         <a className="contact-email" href="mailto:contact@jorgesandoval.dev">
-          contact@jorgesandoval.dev ↗
+          contact@jorgesandoval.dev
         </a>
         <div className="contact-socials">
           <a
@@ -31,14 +31,14 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn ↗
+            LinkedIn
           </a>
           <a
             href="https://github.com/jorgesandev"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub ↗
+            GitHub
           </a>
         </div>
       </div>

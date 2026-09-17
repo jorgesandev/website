@@ -68,7 +68,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     aria-label={`${project.name} source on GitHub`}
                   >
-                    Source ↗
+                    Source
                   </a>
                   {project.demo && (
                     <a
@@ -77,7 +77,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       aria-label={`${project.name} demo`}
                     >
-                      Demo ↗
+                      Demo
                     </a>
                   )}
                 </div>
@@ -92,7 +92,7 @@ export default function Projects() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        More experiments on GitHub ↗
+        More experiments on GitHub
       </a>
     </section>
   );

@@ -42,7 +42,7 @@ export default function Services() {
           offer today.
         </p>
         <a className="text-link" href="#contact">
-          Tell me what you’re working on ↗
+          Tell me what you’re working on
         </a>
       </div>
     </section>
