@@ -1,20 +1,25 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
-import PetProjects from "./components/PetProjects";
-
+import Projects from "./components/Projects";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen relative">
-      <Hero />
-      <About />
-      <Experience />
-      <PetProjects />
-      
-      <footer className="py-12 border-t ghost-border text-center label-text text-xs text-outline bg-surface-container-low">
-        <p>© {new Date().getFullYear()} JORGE ALEJANDRO SANDOVAL ROMO // ALL RIGHTS RESERVED.</p>
-        <p className="mt-4 opacity-50 text-[10px]">SYSTEM CALIBRATED: {new Date().toISOString().split('T')[0]}</p>
+    <>
+      <main id="main">
+        <Hero />
+        <Projects />
+        <About />
+        <Experience />
+        <Services />
+        <Contact />
+      </main>
+      <footer className="wrap footer">
+        <span>© {new Date().getFullYear()} Jorge Sandoval</span>
+        <span className="mono">jorgesandev · Built with intention.</span>
+        <a href="/privacy">Privacy</a>
       </footer>
-    </main>
+    </>
   );
 }

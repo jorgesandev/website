@@ -1,49 +1,67 @@
 # jorgesandoval.dev
 
-Source code for my personal website and developer portfolio.
-Live at **[jorgesandoval.dev](https://jorgesandoval.dev)**.
-
-## About
-
-I'm Jorge Alejandro Sandoval Romo, a software engineer based in Tijuana. This focused professional portfolio presents my experience, selected projects, resume, and contact information for recruiters, collaborators, and technical communities.
-
-The design leans into a minimalist, "tactical laboratory" aesthetic with monospace labels, tight grids, and tonal surface shifts that keep the focus on content.
+Source for [jorgesandoval.dev](https://jorgesandoval.dev), Jorge Sandoval’s professional portfolio. The site presents selected fullstack and applied-AI work, professional experience, services, a public résumé, and direct contact options.
 
 ## Highlights
 
-- **Particle Portrait**: A custom HTML Canvas effect that renders my profile photo as shifting sand particles, reacting to mouse movement and pixel brightness.
-- **Modular Architecture**: Component-driven single-page layout built on the Next.js App Router.
-- **Fluid Interactions**: Asymmetrical flex layouts powered by Framer Motion (horizontal-scroll project carousel, animated hero cursors, etc.).
-- **Tactical Typography**: `Space Grotesk` for labels, `Inter` for body text, 1px borders, and subtle surface color shifts.
+- Evidence-led project case studies with contributions, decisions, outcomes, and limitations.
+- Responsive, keyboard-accessible interface with reduced-motion support.
+- Server-rendered content with a small client boundary for mobile navigation.
+- Progressive-enhancement contact form backed by Formspree.
+- Metadata, sitemap, robots configuration, and a focused privacy page.
 
-## Tech Stack
+## Stack
 
-- [Next.js](https://nextjs.org)
-- [React](https://react.dev)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- TypeScript
+- Next.js App Router
+- React and TypeScript
+- Tailwind CSS
+- IBM Plex Sans and IBM Plex Mono through `next/font`
+- Node.js native test runner
 
-## Professional identity
+## Local development
 
-- Portfolio: [jorgesandoval.dev](https://jorgesandoval.dev)
-- GitHub: [github.com/jorgesandev](https://github.com/jorgesandev)
-- LinkedIn: [linkedin.com/in/jorgesandev](https://www.linkedin.com/in/jorgesandev/)
-- Email: [jorge@jorgesandoval.dev](mailto:jorge@jorgesandoval.dev)
+Requirements: [Bun](https://bun.sh/) 1.3.14+ and Node.js 22.18+.
 
-## Local Development
-
-```bash
-# Install dependencies
-npm install
-
-# Start the dev server
-npm run dev
+```sh
+bun install --frozen-lockfile
+cp .env.example .env.local
+bun run dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) to view the site locally.
+Open [http://localhost:3000](http://localhost:3000).
+
+The contact form is disabled by default. To enable it locally, set the following values in `.env.local`:
+
+```dotenv
+CONTACT_FORM_ENABLED=true
+FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+```
+
+`FORMSPREE_ENDPOINT` is a public form action, not a secret. The application accepts only HTTPS endpoints under `formspree.io/f/`. When the configuration is absent or invalid, the page shows a direct email action instead of a broken form.
+
+## Quality checks
+
+```sh
+bun run format:check
+bun run lint
+bun run typecheck
+bun run test
+bun run build
+```
+
+## Structure
+
+```text
+app/
+  components/    Page sections and interactive navigation
+  lib/           Project data and contact configuration validation
+  privacy/       Contact-form privacy information
+public/          Portrait and downloadable résumé
+tests/           Contact configuration tests
+```
+
+Professional links and contact details are available at [jorgesandoval.dev](https://jorgesandoval.dev).
 
 ## License
 
-© Jorge Sandoval. All rights reserved.
+Copyright © Jorge Sandoval. All rights reserved.

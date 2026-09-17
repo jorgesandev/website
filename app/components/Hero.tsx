@@ -1,50 +1,60 @@
-"use client";
-
-import { motion } from "framer-motion";
-import ParticlePortrait from "./ParticlePortrait";
-import { FaEnvelope, FaFilePdf } from 'react-icons/fa6';
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-[100dvh] pt-16 flex items-center justify-center border-b ghost-border">
-      <div className="max-w-6xl mx-auto px-4 md:px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center justify-items-center md:justify-items-stretch">
-
-        {/* Left Column: Character Art */}
-        <div className="flex justify-center md:justify-end order-1 md:order-1 w-full flex-col items-center md:flex-row">
-          <div className="relative w-full max-w-60 md:max-w-sm aspect-square flex items-center justify-center">
-            <ParticlePortrait />
-          </div>
+    <section className="hero wrap" aria-labelledby="intro-title">
+      <div className="hero-copy">
+        <p className="eyebrow">
+          <span className="status-dot" /> Software engineer · Tijuana, MX
+        </p>
+        <h1 id="intro-title">
+          Useful software.
+          <br />
+          <span>Thoughtfully built.</span>
+        </h1>
+        <p className="hero-intro">
+          I’m Jorge Sandoval. I build fullstack products and applied-AI systems,
+          connecting interfaces, backend services, and the people who use them.
+        </p>
+        <div className="actions">
+          <a className="button primary" href="#projects">
+            Explore my work <span aria-hidden="true">↘</span>
+          </a>
+          <a
+            className="button"
+            href="/Jorge_Alejandro_Sandoval_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View résumé <span aria-hidden="true">↗</span>
+          </a>
         </div>
-
-        {/* Right Column: Text content */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-2 w-full max-w-md md:max-w-full">
-          <div className="label-text text-[10px] text-primary mb-4 flex items-center gap-2 border border-primary/30 bg-primary/5 px-3 py-2 rounded-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block animate-pulse" />
-            Available for opportunities
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-sans font-light text-on-surface mb-4 md:mb-6 flex flex-wrap justify-center md:justify-start items-center">
-            Hi,&nbsp;<span className="text-primary font-normal">Jorge</span>&nbsp;here
-            <motion.span
-              animate={{ opacity: [1, 0] }}
-              transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-              className="inline-block w-[1px] md:w-0.5 h-[1em] bg-primary ml-1"
-            />
-          </h1>
-
-          <p className="text-on-surface-variant font-sans text-sm md:text-lg max-w-lg mb-8 md:mb-10 leading-relaxed md:font-light px-2 md:px-0">
-            Software engineer building mobile, web, and applied-AI products. I work across TypeScript, React Native, Next.js, and Python, with three national hackathon placements including 1st at Ethereum México. UABC degree requirements completed. Based in Tijuana and open to remote, on-site, or relocation-supported roles.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
-            <a href="mailto:jorge@jorgesandoval.dev" className="tactical-button border border-primary text-primary hover:bg-primary hover:text-on-primary uppercase flex items-center justify-center gap-2 w-full sm:w-auto">
-              <FaEnvelope size={16} /> Contact me
-            </a>
-            <a href="/Jorge_Alejandro_Sandoval_Resume.pdf" target="_blank" rel="noopener noreferrer" className="tactical-button border border-outline text-on-surface hover:border-primary hover:text-primary uppercase flex items-center justify-center gap-2 w-full sm:w-auto">
-              <FaFilePdf size={16} /> Resume
-            </a>
-          </div>
+        <p className="availability">
+          Open to engineering roles, selected freelance projects, and
+          collaboration.
+        </p>
+      </div>
+      <figure className="portrait">
+        <div className="portrait-image">
+          <Image
+            src="/jorge.jpeg"
+            alt="Jorge Sandoval"
+            fill
+            sizes="(max-width: 760px) 85vw, 340px"
+            priority
+          />
         </div>
-
+        <figcaption>
+          <span>Jorge Sandoval</span>
+          <span className="mono">@jorgesandev</span>
+        </figcaption>
+        <div className="portrait-note" aria-hidden="true">
+          BUILD / UNDERSTAND / SHARE
+        </div>
+      </figure>
+      <div className="hero-foot mono">
+        <span>Fullstack engineering + applied AI</span>
+        <span>TypeScript · Python · React</span>
       </div>
     </section>
   );
