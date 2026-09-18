@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Software engineer in Tijuana building fullstack products and applied-AI systems. Selected work, experience, and opportunities to collaborate.",
   openGraph: {
-    title: "Jorge Sandoval — Useful software. Thoughtfully built.",
+    title: "Jorge Sandoval — Build the system. Understand the people.",
     description:
       "Fullstack engineering and applied AI. Explore my work and get in touch.",
     url: "https://jorgesandoval.dev",

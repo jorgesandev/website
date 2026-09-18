@@ -8,9 +8,9 @@ export default function Hero() {
           <span className="status-dot" /> Software engineer · Tijuana, MX
         </p>
         <h1 id="intro-title">
-          Useful software.
+          Build the system.
           <br />
-          <span>Thoughtfully built.</span>
+          <span>Understand the people.</span>
         </h1>
         <p className="hero-intro">
           I’m Jorge Sandoval. I build fullstack products and applied-AI systems,
