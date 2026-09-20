@@ -5,6 +5,10 @@ export const projects = [
     category: "Accessible mobility",
     status: "Hackathon MVP",
     summary: "Pedestrian routing that accounts for different mobility needs.",
+    image: {
+      src: "/work/senda-overview.png",
+      alt: "Senda interface showing functional accessibility profiles for pedestrian routing.",
+    },
     problem:
       "A short walking route is not necessarily an accessible one. Barriers and mobility needs change which paths are useful.",
     contribution:
@@ -21,8 +25,12 @@ export const projects = [
     id: "02",
     name: "Yaocihuatl",
     category: "Civic technology · Applied AI",
-    status: "Institutional MVP",
+    status: "Synthetic-data MVP",
     summary: "A system for documenting political gender-based violence online.",
+    image: {
+      src: "/work/yaocihuatl-chimalli.png",
+      alt: "Yaocihuatl's Chimalli guided assistance interface with human-review safeguards.",
+    },
     problem:
       "Organizing potentially harmful online material calls for searchable evidence and careful human review.",
     contribution:
@@ -39,8 +47,12 @@ export const projects = [
     id: "03",
     name: "LiquiFi",
     category: "Financial technology",
-    status: "1st · Ethereum México 2025",
+    status: "1st · Arbitrum Innovation Track",
     summary: "An invoice-financing prototype for small businesses.",
+    image: {
+      src: "/work/liquifi-overview.png",
+      alt: "LiquiFi's invoice-financing prototype interface.",
+    },
     problem:
       "Small businesses can face a gap between issuing an invoice and receiving payment.",
     contribution:
@@ -48,7 +60,7 @@ export const projects = [
     decision:
       "Connected a web interface to smart contracts to demonstrate the financing workflow end to end.",
     outcome:
-      "The team placed first at Ethereum México in November 2025. This is a hackathon prototype, not an audited financial service.",
+      "The team placed first in the Arbitrum Innovation Track at Ethereum México 2025. This is an unaudited hackathon prototype, not a financial service.",
     stack: ["Next.js", "Arbitrum", "Smart contracts"],
     github: "https://github.com/jorgesandev/liquifi",
     demo: "https://liquifidev.vercel.app/",

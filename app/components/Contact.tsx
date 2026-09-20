@@ -1,5 +1,6 @@
 import ContactForm from "./ContactForm";
 import { contactEndpoint } from "../lib/contact";
+import SocialLinks from "./SocialLinks";
 export default function Contact() {
   const endpoint = contactEndpoint(
     process.env.FORMSPREE_ENDPOINT,
@@ -8,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="section wrap contact-grid"
+      className={`section wrap contact-grid${endpoint ? "" : " contact-grid--email-only"}`}
       aria-labelledby="contact-title"
     >
       <div className="contact-copy">
@@ -25,24 +26,9 @@ export default function Contact() {
         <a className="contact-email" href="mailto:contact@jorgesandoval.dev">
           contact@jorgesandoval.dev
         </a>
-        <div className="contact-socials">
-          <a
-            href="https://www.linkedin.com/in/jorgesandev/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/jorgesandev"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        </div>
+        <SocialLinks className="contact-socials" />
       </div>
-      <ContactForm endpoint={endpoint} />
+      {endpoint && <ContactForm endpoint={endpoint} />}
     </section>
   );
 }

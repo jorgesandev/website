@@ -1,4 +1,8 @@
 import Image from "next/image";
+import { professionalSocialLinks, secondarySocialLinks } from "../lib/socials";
+import SocialLinks from "./SocialLinks";
+
+const profilePhoto = "https://avatars.githubusercontent.com/u/116247490?v=4";
 
 export default function Hero() {
   return (
@@ -33,14 +37,31 @@ export default function Hero() {
           Open to engineering roles, selected freelance projects, and
           collaboration.
         </p>
+        <nav className="professional-links" aria-label="Professional profiles">
+          {professionalSocialLinks.map((social) => (
+            <a
+              className="professional-link"
+              href={social.href}
+              key={social.label}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {social.label}
+            </a>
+          ))}
+        </nav>
+        <div className="hero-socials">
+          <span className="mono">Elsewhere</span>
+          <SocialLinks className="social-links" links={secondarySocialLinks} />
+        </div>
       </div>
       <figure className="portrait">
         <div className="portrait-image">
           <Image
-            src="/jorge.jpeg"
-            alt="Jorge Sandoval"
+            src={profilePhoto}
+            alt="Jorge Sandoval, software engineer"
             fill
-            sizes="(max-width: 760px) 85vw, 340px"
+            sizes="(max-width: 760px) 72vw, 340px"
             priority
           />
         </div>

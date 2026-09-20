@@ -1,23 +1,5 @@
-import Link from "next/link";
 export default function ContactForm({ endpoint }: { endpoint: string | null }) {
-  if (!endpoint)
-    return (
-      <div className="contact-unavailable">
-        <p className="eyebrow">Start a conversation</p>
-        <h3>One message is enough.</h3>
-        <p>
-          Tell me about the role, the problem you’re working on, or the idea
-          you’d like to explore.
-        </p>
-        <a className="button primary" href="mailto:contact@jorgesandoval.dev">
-          Email Jorge
-        </a>
-        <p className="form-note">
-          The inquiry form is temporarily unavailable. Direct email is always
-          welcome.
-        </p>
-      </div>
-    );
+  if (!endpoint) return null;
   return (
     <form
       className="contact-form"
@@ -84,8 +66,8 @@ export default function ContactForm({ endpoint }: { endpoint: string | null }) {
       </div>
       <p id="contact-notice" className="form-note">
         Your details are used to respond to your inquiry. No newsletter signup.{" "}
-        <Link href="/privacy">Privacy details</Link>. Formspree will confirm
-        your submission on the next page.
+        <a href="/privacy">Privacy details</a>. Formspree will confirm your
+        submission on the next page.
       </p>
       <button className="button primary" type="submit">
         Send inquiry

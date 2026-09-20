@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "../lib/projects";
 export default function Projects() {
   return (
@@ -22,6 +23,15 @@ export default function Projects() {
         {projects.map((project) => (
           <article className="case-study" key={project.id}>
             <div className="case-index mono">/{project.id}</div>
+            <figure className="case-media">
+              <Image
+                alt={project.image.alt}
+                fill
+                priority={project.id === "01"}
+                sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) 38vw, 430px"
+                src={project.image.src}
+              />
+            </figure>
             <div className="case-body">
               <div className="case-top">
                 <p className="eyebrow">{project.category}</p>
@@ -29,7 +39,7 @@ export default function Projects() {
               </div>
               <h3>{project.name}</h3>
               <p className="case-summary">{project.summary}</p>
-              <div className="case-details">
+              <div className="case-details case-details--essential">
                 <div>
                   <h4>Problem</h4>
                   <p>{project.problem}</p>
