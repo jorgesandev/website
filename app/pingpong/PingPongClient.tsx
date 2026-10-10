@@ -135,6 +135,9 @@ export default function PingPongClient() {
   );
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [screen]);
+  useEffect(() => {
     activeMatch.current = match;
   }, [match]);
   useEffect(() => {
@@ -202,7 +205,7 @@ export default function PingPongClient() {
     };
     document.addEventListener("visibilitychange", visibility);
     const rotate = () => {
-      if (activeMatch.current?.mode !== "manual") {
+      if (activeMatch.current && activeMatch.current.mode !== "manual") {
         setPaused(true);
         setReady(false);
         setMessage(
@@ -211,9 +214,11 @@ export default function PingPongClient() {
       }
     };
     window.addEventListener("orientationchange", rotate);
+    window.screen.orientation?.addEventListener("change", rotate);
     return () => {
       document.removeEventListener("visibilitychange", visibility);
       window.removeEventListener("orientationchange", rotate);
+      window.screen.orientation?.removeEventListener("change", rotate);
     };
   }, []);
   useEffect(() => {
@@ -445,7 +450,11 @@ export default function PingPongClient() {
   const modalOpen = help || !!pending || sideChange || finishDialog;
 
   return (
-    <main id="main" lang="es" className={styles.app}>
+    <main
+      id="main"
+      lang="es"
+      className={`${styles.app} ${screen === "match" ? styles.matchScreen : ""}`}
+    >
       <div className={styles.container} inert={modalOpen ? true : undefined}>
         <header className={styles.header}>
           <button
@@ -676,6 +685,21 @@ export default function PingPongClient() {
               <div className={styles.matchToggles}>
                 <button
                   className={styles.smallButton}
+                  disabled={
+                    completed ||
+                    sideChange ||
+                    (!ready && match.mode !== "manual" && paused)
+                  }
+                  onClick={() => {
+                    setPaused(!paused);
+                    setPending(null);
+                  }}
+                >
+                  {paused ? "▶ Reanudar" : "Ⅱ Pausa"}
+                </button>
+
+                <button
+                  className={styles.smallButton}
                   aria-pressed={sound}
                   onClick={() => setSound(!sound)}
                 >
@@ -717,7 +741,10 @@ export default function PingPongClient() {
                       }
                       key={player}
                     >
-                      <div className={styles.playerName}>
+                      <div
+                        className={styles.playerName}
+                        title={match.players[player]}
+                      >
                         {match.players[player]}
                       </div>
                       <div
@@ -798,20 +825,6 @@ export default function PingPongClient() {
                     }}
                   >
                     Corregir último
-                  </button>
-                  <button
-                    className={styles.smallButton}
-                    disabled={
-                      completed ||
-                      sideChange ||
-                      (!ready && match.mode !== "manual" && paused)
-                    }
-                    onClick={() => {
-                      setPaused(!paused);
-                      setPending(null);
-                    }}
-                  >
-                    {paused ? "▶ Reanudar" : "Ⅱ Pausa"}
                   </button>
                   <button
                     className={styles.smallButton}

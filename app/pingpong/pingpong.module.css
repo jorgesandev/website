@@ -979,3 +979,217 @@
     transition: none;
   }
 }
+
+/* Keep the live view and score together on short, horizontal screens. */
+@media (orientation: landscape) and (max-height: 600px) {
+  .app {
+    padding: max(8px, env(safe-area-inset-top))
+      max(16px, env(safe-area-inset-right))
+      max(8px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+  .header {
+    padding: 0 0 4px;
+  }
+  .headerCaption {
+    display: none;
+  }
+  .brand {
+    font-size: 22px;
+  }
+  .brandMark {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+  }
+  .iconButton {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  .hero {
+    padding: 24px 0;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(38px, 6vw, 60px);
+    margin: 14px 0;
+  }
+  .heroVisual {
+    min-height: 260px;
+  }
+  .heroActions {
+    margin-top: 18px;
+  }
+  .matchHeading {
+    margin: 6px 0;
+    align-items: center;
+    gap: 8px;
+  }
+  .matchHeading .kicker {
+    display: none;
+  }
+  .matchHeading h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .matchToggles {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .matchToggles .smallButton {
+    min-height: 44px;
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+  .matchScreen .matchGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    max-width: none;
+    gap: 12px;
+  }
+  .matchScreen .manualGrid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 850px;
+  }
+  .scorePanel,
+  .cameraPanel {
+    max-height: calc(
+      100dvh - 108px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+    );
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+  .panelHead {
+    padding: 7px 12px;
+    min-height: 30px;
+    font-size: 9px;
+  }
+  .scoreboard {
+    padding: 8px 4px;
+  }
+  .playerOne,
+  .playerTwo {
+    padding-inline: 10px;
+  }
+  .playerName {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .bigScore,
+  .manualGrid .bigScore {
+    font-size: clamp(48px, 16dvh, 72px);
+    line-height: 1.1;
+  }
+  .playerMeta {
+    margin: 2px 0 6px;
+    font-size: 11px;
+    min-height: 16px;
+  }
+  .pointButton {
+    min-height: 44px;
+    font-size: 20px;
+  }
+  .gameStatus {
+    font-size: 12px;
+    margin: 0 12px 8px;
+  }
+  .setHistory {
+    padding: 0 12px 8px;
+    gap: 10px;
+  }
+  .matchControls {
+    padding: 8px;
+    gap: 6px;
+  }
+  .matchControls .smallButton {
+    flex: 1 1 auto;
+    padding-inline: 8px;
+  }
+  .matchFooter {
+    flex-wrap: wrap;
+    gap: 0 10px;
+    padding-inline: 12px;
+  }
+  .scorePanel > .instructions {
+    padding: 0 12px 8px;
+    font-size: 12px;
+  }
+  .videoFrame {
+    width: min(
+      100%,
+      calc(
+        (
+            100dvh - 208px - env(safe-area-inset-top) -
+              env(safe-area-inset-bottom)
+          ) *
+          var(--camera-aspect)
+      )
+    );
+    margin-inline: auto;
+  }
+  .videoFrame:has(.cameraPlaceholder) {
+    width: 100%;
+    height: 64px;
+  }
+  .cameraPlaceholder {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .cameraPlaceholder svg {
+    width: 28px;
+    margin: 0;
+  }
+  .cameraPlaceholder strong {
+    font-size: 14px;
+  }
+  .cameraPlaceholder span {
+    display: none;
+  }
+  .cameraBody > .primary {
+    min-height: 44px;
+    padding-block: 10px;
+  }
+  .cameraBody {
+    padding: 8px 12px;
+  }
+  .instructions {
+    padding: 6px 0;
+    font-size: 12px;
+  }
+  .localBadge {
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+  .modalBackdrop {
+    padding: max(12px, env(safe-area-inset-top))
+      max(16px, env(safe-area-inset-right))
+      max(12px, env(safe-area-inset-bottom))
+      max(16px, env(safe-area-inset-left));
+  }
+  .modal {
+    max-height: calc(
+      100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+    );
+    padding: 18px 24px;
+    overscroll-behavior: contain;
+  }
+  .modal h2 {
+    font-size: 27px;
+    margin: 8px 0;
+  }
+  .modal p,
+  .modal ol {
+    margin-bottom: 12px;
+  }
+  .pendingChoices {
+    margin: 12px 0 8px;
+  }
+  .choiceCyan,
+  .choiceOrange {
+    min-height: 48px;
+    padding-block: 12px;
+  }
+}

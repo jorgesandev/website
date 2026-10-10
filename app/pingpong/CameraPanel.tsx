@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { validCorners, type Corners, type XY } from "./vision/geometry";
 import type { Suggestion, VisionResult } from "./vision/tracker";
 import styles from "./pingpong.module.css";
@@ -27,6 +27,7 @@ export default function CameraPanel({
   onCameraLost,
 }: Props) {
   const video = useRef<HTMLVideoElement>(null);
+  const videoSize = useRef("");
   const stream = useRef<MediaStream | null>(null);
   const objectUrl = useRef<string | null>(null);
   const request = useRef(0);
@@ -55,6 +56,20 @@ export default function CameraPanel({
   useEffect(() => {
     callbacks.current.onReady(!!source && calibrated && !trackingError);
   }, [source, calibrated, trackingError]);
+  useEffect(() => {
+    const rotate = () => {
+      setCorners([]);
+      setResult(null);
+      callbacks.current.onReady(false);
+      callbacks.current.onCameraLost();
+    };
+    window.addEventListener("orientationchange", rotate);
+    window.screen.orientation?.addEventListener("change", rotate);
+    return () => {
+      window.removeEventListener("orientationchange", rotate);
+      window.screen.orientation?.removeEventListener("change", rotate);
+    };
+  }, []);
   useEffect(
     () => () => {
       request.current++;
@@ -65,6 +80,7 @@ export default function CameraPanel({
   );
 
   function releaseSource() {
+    videoSize.current = "";
     stream.current?.getTracks().forEach((track) => track.stop());
     stream.current = null;
     if (objectUrl.current) URL.revokeObjectURL(objectUrl.current);
@@ -140,8 +156,17 @@ export default function CameraPanel({
     setGeneration((value) => value + 1);
   }
   function metadata() {
-    if (video.current?.videoWidth)
-      setAspect(video.current.videoWidth / video.current.videoHeight);
+    const element = video.current;
+    if (!element?.videoWidth || !element.videoHeight) return;
+    const size = `${element.videoWidth}:${element.videoHeight}`;
+    if (videoSize.current && videoSize.current !== size) {
+      setCorners([]);
+      setResult(null);
+      callbacks.current.onReady(false);
+      callbacks.current.onCameraLost();
+    }
+    videoSize.current = size;
+    setAspect(element.videoWidth / element.videoHeight);
   }
 
   useEffect(() => {
@@ -282,12 +307,18 @@ export default function CameraPanel({
         <span className={styles.kicker}>02 / Cámara</span>
         <span className={styles.localBadge}>● Solo en tu teléfono</span>
       </div>
-      <div className={styles.videoFrame} style={{ aspectRatio: aspect }}>
+      <div
+        className={styles.videoFrame}
+        style={
+          { aspectRatio: aspect, "--camera-aspect": aspect } as CSSProperties
+        }
+      >
         <video
           ref={video}
           playsInline
           muted
           onLoadedMetadata={metadata}
+          onResize={metadata}
           onEnded={() => {
             callbacks.current.onCameraLost();
             setError("Terminó el video. Revisa el marcador.");
@@ -468,7 +499,7 @@ export default function CameraPanel({
               </span>
             </div>
             {!calibrated ? (
-              <p className={styles.instructions}>
+              <p id="calibration-help" className={styles.instructions}>
                 {corners.length < 4 ? (
                   <>
                     Toca la esquina{" "}
@@ -480,7 +511,7 @@ export default function CameraPanel({
                 )}
               </p>
             ) : (
-              <p className={styles.instructions}>
+              <p id="calibration-help" className={styles.instructions}>
                 Mesa calibrada.{" "}
                 {active
                   ? "El conteo experimental está activo."
