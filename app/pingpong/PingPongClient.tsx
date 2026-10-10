@@ -1038,7 +1038,10 @@ export default function PingPongClient() {
         <footer className={styles.footer}>
           <span>HECHO PARA OTRO SET.</span>
           <Link href="/">Jorge Sandoval ↗</Link>
-          <span>Cámara local · visión beta</span>
+          <span>
+            Cámara local · visión beta ·{" "}
+            <a href="/pingpong/licenses.txt">Licencias</a>
+          </span>
         </footer>
       </div>
       {modalOpen ? (
