@@ -2,3 +2,7 @@
 .claude
 node_modules
 public/*.pdf
+
+public/pingpong/vision.worker.js
+test-results
+playwright-report
