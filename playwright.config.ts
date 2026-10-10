@@ -14,6 +14,25 @@ export default defineConfig({
       name: "mobile",
       use: { ...devices["iPhone 13"], defaultBrowserType: "chromium" },
     },
+    {
+      name: "landscape",
+      use: {
+        ...devices["iPhone 13 landscape"],
+        defaultBrowserType: "chromium",
+      },
+    },
+    {
+      name: "compact-landscape",
+      use: {
+        ...devices["iPhone SE landscape"],
+        defaultBrowserType: "chromium",
+      },
+    },
+    {
+      name: "webkit-landscape",
+      testMatch: "**/pingpong-landscape.spec.ts",
+      use: { ...devices["iPhone 13 landscape"], browserName: "webkit" },
+    },
   ],
   webServer: process.env.PINGPONG_TEST_URL
     ? undefined

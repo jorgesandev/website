@@ -40,11 +40,11 @@ bun run lint
 bun run typecheck
 bun run test
 bun run build
-bunx playwright install chromium
+bunx playwright install chromium webkit
 bun run test:e2e
 ```
 
-Playwright runs desktop and mobile-size Chromium against a production build. For a deployed build, set `PINGPONG_TEST_URL` to the deployment origin. Synthetic camera streams exercise capture, calibration and worker transport; they do not validate physical game accuracy. Unit tests use Node's existing test runner to avoid a second testing framework.
+Playwright runs desktop, portrait and two landscape phone sizes in Chromium, plus landscape camera/rotation/dialog checks in WebKit, against a production build. In landscape, camera and score share the screen, pause/resume stays above both panels, and secondary controls scroll inside each panel. Rotation or video dimension changes pause the match and clear calibration without clearing points. For a deployed build, set `PINGPONG_TEST_URL` to the deployment origin. Synthetic camera streams exercise capture, calibration and worker transport; they do not validate physical game accuracy. Unit tests use Node's existing test runner to avoid a second testing framework.
 
 ## PWA and privacy
 
