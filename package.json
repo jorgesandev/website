@@ -9,25 +9,21 @@
     "node": ">=22.18.0"
   },
   "scripts": {
-    "dev": "bun run build:vision && next dev",
-    "build": "bun run build:vision && next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "build:vision": "bun build app/pingpong/vision/worker.ts --target browser --minify --outfile public/pingpong/vision.worker.js",
-    "test:e2e": "playwright test"
+    "format:check": "prettier --check ."
   },
   "dependencies": {
-    "idb": "^8.0.4",
     "next": "^16.3.5",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.64.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^22.20.3",
     "@types/react": "^19.3.0",

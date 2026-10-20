@@ -23,8 +23,8 @@ export default function Privacy() {
       <h2>Questions and deletion requests</h2>
       <p>
         To ask about your information or request deletion of your inquiry, email{" "}
-        <a href="mailto:contact@jorgesandoval.dev">contact@jorgesandoval.dev</a>
-        . Messages may remain in Formspree and the email inbox until removed;
+        <a href="mailto:jorge@jorgesandoval.dev">jorge@jorgesandoval.dev</a>.
+        Messages may remain in Formspree and the email inbox until removed;
         technical provider retention is governed by the provider’s policies.
       </p>
       <p>

@@ -65,7 +65,3 @@ Professional links and contact details are available at [jorgesandoval.dev](http
 ## License
 
 Copyright © Jorge Sandoval. All rights reserved.
-
-## PingPong
-
-The mobile scorer lives at [/pingpong](https://jorgesandoval.dev/pingpong). It includes local camera tracking, assisted points, limited experimental automatic double-bounce scoring, manual correction and local history. See [setup, architecture and limitations](docs/pingpong/README.md) and [validation](docs/pingpong/validation-report.md). The camera mode is a beta; real-game accuracy has not been measured.

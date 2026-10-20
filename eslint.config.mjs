@@ -12,9 +12,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    "public/pingpong/vision.worker.js",
-    "test-results/**",
-    "playwright-report/**",
   ]),
 ]);
 

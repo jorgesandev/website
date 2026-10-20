@@ -44,5 +44,3 @@ next-env.d.ts
 
 /test-results/
 /playwright-report/
-
-/public/pingpong/vision.worker.js

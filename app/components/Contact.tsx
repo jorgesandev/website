@@ -23,8 +23,8 @@ export default function Contact() {
           Have an engineering opportunity, a project in mind, or a question
           worth exploring? I’d like to hear about it.
         </p>
-        <a className="contact-email" href="mailto:contact@jorgesandoval.dev">
-          contact@jorgesandoval.dev
+        <a className="contact-email" href="mailto:jorge@jorgesandoval.dev">
+          jorge@jorgesandoval.dev
         </a>
         <SocialLinks className="contact-socials" />
       </div>
