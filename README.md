@@ -62,6 +62,14 @@ tests/           Contact configuration tests
 
 Professional links and contact details are available at [jorgesandoval.dev](https://jorgesandoval.dev).
 
+## Résumé downloads
+
+The home page offers one-page PDFs in [English](public/Jorge_Alejandro_Sandoval_Resume_EN.pdf) and [Spanish](public/Jorge_Alejandro_Sandoval_Resume_ES.pdf). Both use `jorge@jorgesandoval.dev`. Keep the two versions factually aligned when updating experience, education, credentials, or projects. The original `/Jorge_Alejandro_Sandoval_Resume.pdf` URL remains an English copy for existing links.
+
+## Recent changes
+
+- October 20, 2026: Changed the website and résumé contact address to `jorge@jorgesandoval.dev`; removed the PingPong route, camera/PWA assets, dependencies, tests, and build configuration while preserving Git history. Added English and Spanish résumé downloads.
+
 ## License
 
 Copyright © Jorge Sandoval. All rights reserved.

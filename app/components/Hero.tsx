@@ -26,11 +26,22 @@ export default function Hero() {
           </a>
           <a
             className="button"
-            href="/Jorge_Alejandro_Sandoval_Resume.pdf"
+            href="/Jorge_Alejandro_Sandoval_Resume_EN.pdf"
+            hrefLang="en"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View résumé
+            Résumé · English
+          </a>
+          <a
+            className="button"
+            href="/Jorge_Alejandro_Sandoval_Resume_ES.pdf"
+            hrefLang="es"
+            lang="es"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV · Español
           </a>
         </div>
         <p className="availability">
