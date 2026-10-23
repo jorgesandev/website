@@ -1,17 +1,24 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { themeInitializationScript } from "./lib/theme";
-const sans = IBM_Plex_Sans({
+// Bundle fonts to avoid Google Fonts URL parsing failures during builds.
+const sans = localFont({
+  src: "./fonts/ibm-plex-sans-latin-variable.woff2",
   variable: "--font-plex-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: "400 600",
+  style: "normal",
+  display: "swap",
 });
-const mono = IBM_Plex_Mono({
+const mono = localFont({
+  src: [
+    { path: "./fonts/ibm-plex-mono-latin-400.woff2", weight: "400" },
+    { path: "./fonts/ibm-plex-mono-latin-500.woff2", weight: "500" },
+  ],
   variable: "--font-plex-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
+  style: "normal",
+  display: "swap",
 });
 export const viewport: Viewport = {
   colorScheme: "light dark",

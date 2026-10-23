@@ -16,12 +16,12 @@ Source for [jorgesandoval.dev](https://jorgesandoval.dev), Jorge Sandoval’s pr
 - Next.js App Router
 - React and TypeScript
 - Tailwind CSS
-- IBM Plex Sans and IBM Plex Mono through `next/font`
+- Bundled IBM Plex Sans and IBM Plex Mono through `next/font/local`
 - Node.js native test runner
 
 ## Local development
 
-Requirements: [Bun](https://bun.sh/) 1.3.14+ and Node.js 22.18+.
+Requirements: [Bun](https://bun.sh/) 1.3.14+ and Node.js 22.18+ (22.x).
 
 ```sh
 bun install --frozen-lockfile
@@ -30,6 +30,8 @@ bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+Font files and their licenses live in `app/fonts/`. Builds use these local assets without fetching Google Fonts. Vercel uses Node.js 22.x, constrained by `package.json` to avoid automatic major-version upgrades.
 
 The contact form is disabled by default. To enable it locally, set the following values in `.env.local`:
 
