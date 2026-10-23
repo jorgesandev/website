@@ -20,6 +20,13 @@ export default function Privacy() {
         marketing emails. The form provider, email provider, and hosting service
         may process technical delivery and security information.
       </p>
+      <h2>Color theme preference</h2>
+      <p>
+        The site follows your device’s appearance by default. If you choose
+        Light or Dark in the header, that preference is saved in your browser’s
+        local storage. It is not sent to a server. Choose System to remove the
+        saved override, or clear this site’s browser storage.
+      </p>
       <h2>Questions and deletion requests</h2>
       <p>
         To ask about your information or request deletion of your inquiry, email{" "}

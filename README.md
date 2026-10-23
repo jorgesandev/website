@@ -6,6 +6,7 @@ Source for [jorgesandoval.dev](https://jorgesandoval.dev), Jorge Sandoval’s pr
 
 - Evidence-led project case studies with contributions, decisions, outcomes, and limitations.
 - Responsive, keyboard-accessible interface with reduced-motion support.
+- Dark sage light and dark themes, with a natural-color portrait. A header control offers System (default), Light, and Dark; manual choices are remembered locally and applied before the page paints.
 - Server-rendered content with a small client boundary for mobile navigation.
 - Progressive-enhancement contact form backed by Formspree.
 - Metadata, sitemap, robots configuration, and a focused privacy page.
@@ -68,6 +69,7 @@ The home page offers one-page PDFs in [English](public/Jorge_Alejandro_Sandoval_
 
 ## Recent changes
 
+- October 22, 2026: Applied the dark sage palette in light and dark themes using CSS system preference, updated browser theme colors and interactive states, and restored the portrait's natural color. Printed pages retain light styling.
 - October 20, 2026: Changed the website and résumé contact address to `jorge@jorgesandoval.dev`; removed the PingPong route, camera/PWA assets, dependencies, tests, and build configuration while preserving Git history. Added English and Spanish résumé downloads.
 
 ## License

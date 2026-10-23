@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const links = [
   ["Work", "projects"],
@@ -22,31 +23,35 @@ export default function Navbar() {
         <Link className="wordmark" href="/#main" onClick={() => setOpen(false)}>
           Jorge Sandoval<span aria-hidden="true">.</span>
         </Link>
-        <button
-          className="menu-toggle"
-          aria-expanded={open}
-          aria-controls="navigation-links"
-          onClick={() => setOpen((current) => !current)}
-        >
-          {open ? "Close −" : "Menu +"}
-        </button>
-        <div
-          id="navigation-links"
-          className={`nav-links ${open ? "is-open" : ""}`}
-        >
-          {links.map(([label, id]) => (
-            <Link key={id} href={`/#${id}`} onClick={() => setOpen(false)}>
-              {label}
-            </Link>
-          ))}
-          <a
-            className="nav-social"
-            href="https://www.linkedin.com/in/jorgesandev/"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="nav-controls">
+          <div
+            id="navigation-links"
+            className={`nav-links ${open ? "is-open" : ""}`}
           >
-            LinkedIn
-          </a>
+            {links.map(([label, id]) => (
+              <Link key={id} href={`/#${id}`} onClick={() => setOpen(false)}>
+                {label}
+              </Link>
+            ))}
+            <a
+              className="nav-social"
+              href="https://www.linkedin.com/in/jorgesandev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <ThemeSwitcher />
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-expanded={open}
+            aria-controls="navigation-links"
+            onClick={() => setOpen((current) => !current)}
+          >
+            {open ? "Close −" : "Menu +"}
+          </button>
         </div>
       </nav>
     </header>
